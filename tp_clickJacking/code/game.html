@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Catch Me!</title>
+    <style>
+        #catchButton {
+            position: absolute;
+            top: 450px;
+            left: 400px;
+            z-index : 1;
+
+        }
+
+        #hiddenPortal {
+            position : absolute;
+            top : 150px;
+            left : 50px;
+            z-index : 3; 
+            opacity : 0.1;
+            border : none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Catch Me!</h1>
+    <p>Score: <span id="score">0</span></p>
+    <button id="catchButton" onclick="catchMe()">Catch Me</button>
+
+    <script>
+        let score = 0;
+        let a = document .getElementById("catchButton");
+        function catchMe() {
+            score++;
+            document.getElementById("score").textContent = score;
+
+            if (score === 4 ){
+                
+                a.style.left = "30px";
+                a.style.top = "260px";
+            }
+            else {
+
+
+                let x = Math.floor(Math.random() * 200 );
+                let y = 450 + Math.floor(Math.random() * 200);
+                
+                let a = document.getElementById("catchButton");
+                a.style.left = x + "px";
+                a.style.top = y + "px";
+                
+            }
+
+
+        }
+
+        function revealAttack(){
+            document.getElementById("hiddenPortal").style.opacity = 1;
+        }
+    </script>
+
+    <button onclick="revealAttack()"> Reveal Hidden Page </button>
+
+
+    <iframe id="hiddenPortal" src="portal.html" width="400" height="300"
+                            style="position: absolute; top: 100px; left: 50px; opacity : 0,5;">
+    </iframe>
+</body>
+</html>
