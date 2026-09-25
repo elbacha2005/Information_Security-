@@ -7,4 +7,5 @@ Lab submissions for the Information Security course
 |--------|-------|
 | Challenges | uploading screenshots of solved problems |
 | tp_clickJacking | Clickjacking attacks and defenses |
+| tp_statefulTracking | stateful tracking technical implementation |
 
