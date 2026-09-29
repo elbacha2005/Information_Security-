@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fingerprinting Lab</title>
+</head>
+<body>
+    <h1>Browser Fingerprinting Lab</h1>
+    <p>Passive clues have been sent to the server. Check the Flask console.</p>
+
+    <hr>
+    <h2>Active Feature Collection</h2>
+    <p id="feature-output">Waiting for JavaScript...</p>
+
+    <hr>
+    <h2>Typing Behavior</h2>
+    <p id="target-sentence">Cookies are gone, but Alice's rhythm still leaves traces!</p>
+    <input type="text" id="typing-input" size="60" placeholder="Type the sentence above...">
+    <button id="restart-btn">Restart</button>
+    <div id="typing-results"></div>
+
+    <hr>
+    <h2>Your Fingerprint</h2>
+    <p id="fingerprint-output">Not yet generated.</p>
+
+    <script src="{{ url_for('static', filename='fingerprint.js') }}"></script>
+    <script src="{{ url_for('static', filename='fingerprint2.js') }}"></script>
+</body>
+</html>
